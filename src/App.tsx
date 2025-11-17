@@ -45,7 +45,7 @@ function Resume() {
   const jobs = [
     {
       title: "Front-End Developer at Tubby Todd",
-      date: "2021 - Present",
+      date: "DEC 2021- NOV 2025",
       points: [
         "Developed and maintained Shopify stores using Liquid, HTML, CSS, and JavaScript.",
         "Collaborated with designers and developers to improve UI/UX across multiple platforms.",
@@ -53,8 +53,16 @@ function Resume() {
       ]
     },
     {
+      title: "Social Media Graphic Designer at ReviewBoost",
+      date: "FEB 2021 - DEC 2021",
+      points: [
+        "Created visually compelling editorial layouts and digital content.",
+        "Worked closely with editorial teams to deliver designs on tight deadlines."
+      ]
+    },
+    {
       title: "Graphic Designer at Preserve Magazine",
-      date: "2019 - 2021",
+      date: "OCT 2019 - JUL 2021",
       points: [
         "Created visually compelling editorial layouts and digital content.",
         "Worked closely with editorial teams to deliver designs on tight deadlines."
@@ -85,7 +93,14 @@ function Resume() {
 function Skills(){
   return(
     <section id="skills" className="max-w-4xl mx-auto px-6 pb-20">
-
+      <ul>
+        <li>JavaScript</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>Adobe Suite</li>
+        <li>Figma</li>
+        <li>Shopify</li>
+      </ul>
     </section>
   )
 }
