@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 
-export default function Navbar({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (open: boolean) => void }) {
+export default function Navbar({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+ }) {
 
   useEffect(() => {
-    const closeMenu = () => setMenuOpen(false);
-    window.addEventListener("click", closeMenu);
-    return () => window.removeEventListener("click", closeMenu);
-  }, [setMenuOpen]);
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }, [menuOpen]);
 
   return (
     <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blue-lg border-b border-white/10 shadow-lg">
@@ -14,7 +13,9 @@ export default function Navbar({ menuOpen, setMenuOpen }: { menuOpen: boolean; s
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="font-mono text-lg font-bold text-white">{" "}Kayla Noelle</a>
 
-          <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden">&#9776
+          <div className="w-7 h-5 relative cursor-pointer z-40 md:hidden" onClick={() => setMenuOpen(prev => !prev)}
+>
+            &#9776;
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" className=" text-gray-300 hover:text-white transition-colors">Home</a>
