@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 export default function MobileMenu({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
  }) {
 

@@ -3,7 +3,9 @@ import { LoadingScreen } from "./components/LoadingScreen.tsx"
 import "./index.css"
 import Navbar from "./components/Navbar.tsx";
 import MobileMenu from "./components/MobileMenu.tsx";
+import Home from "./components/sections/Home.tsx";
 import { useState } from "react";
+import About from "./components/sections/About.tsx";
  function App() {
   const [isLoaded, setIsLoaded] =  useState (false);
   const [menuOpen, setMenuOpen] =  useState<boolean> (false);
@@ -13,6 +15,8 @@ import { useState } from "react";
       <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"} bg-black text-gray-100`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Home />
+        <About />
       </div>
   
     </>
