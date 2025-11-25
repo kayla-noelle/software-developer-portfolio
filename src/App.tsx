@@ -7,6 +7,7 @@ import Home from "./components/sections/Home.tsx";
 import { useState } from "react";
 import About from "./components/sections/About.tsx";
 import Projects from "./components/sections/Projects.tsx";
+import Contact from "./components/sections/Contact.tsx";
  function App() {
   const [isLoaded, setIsLoaded] =  useState (false);
   const [menuOpen, setMenuOpen] =  useState<boolean> (false);
@@ -19,6 +20,7 @@ import Projects from "./components/sections/Projects.tsx";
         <Home />
         <About />
         <Projects />
+        <Contact />
       </div>
   
     </>
