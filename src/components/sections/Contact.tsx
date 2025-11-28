@@ -1,19 +1,42 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-
+import emailjs from 'emailjs-com'
+import React from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = React.useState({
+    name:"",
+    email:"",
+    message:"" ,
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY).then((result) => {
+      alert("Message sent successfully!");
+      setFormData({name:"",
+      email:"",
+      message:"" ,
+      });
+    }).catch(() => alert("Oops! Something went wrong, please try again."));
+
+  };
     return (
       <section id="contact" className="min-h-screen flex items-center justify-center relative bg-white dark:bg-gray-900 py-20">
       <RevealOnScroll>
         <div className="px-4 w-150">
           <h2 className="text-gray-900 dark:text-white text-4xl font-bold mb-8">Get in Touch</h2>
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
               <input 
               type="text" 
               id="name" 
               name="name" 
               required 
+              value={formData.name}
+              onChange={(e) => setFormData({...formData, name: e.target.value})}
               className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
               placeholder="Name..." />
             </div>
@@ -23,6 +46,8 @@ export default function Contact() {
               id="email" 
               name="email" 
               required 
+              value={formData.email}
+              onChange={(e) => setFormData({...formData, email: e.target.value})}
               className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
               placeholder="example@example.com" />
             </div>
@@ -31,6 +56,8 @@ export default function Contact() {
               id="message" 
               name="message" 
               required 
+              value={formData.message}
+              onChange={(e) => setFormData({...formData, message: e.target.value})}
               rows={5}
               className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
               placeholder="Your message..." />
