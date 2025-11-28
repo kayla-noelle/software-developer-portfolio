@@ -37,7 +37,7 @@ export default function Contact() {
               required 
               value={formData.name}
               onChange={(e) => setFormData({...formData, name: e.target.value})}
-              className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+              className="w-full bg-slate-200 dark:bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 dark:focus:border-blue-300 dark:focus:bg-blue-300/10"
               placeholder="Name..." />
             </div>
             <div className="relative">
@@ -48,7 +48,7 @@ export default function Contact() {
               required 
               value={formData.email}
               onChange={(e) => setFormData({...formData, email: e.target.value})}
-              className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+              className="w-full bg-slate-200 dark:bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 dark:focus:border-blue-300 dark:focus:bg-blue-300/10"
               placeholder="example@example.com" />
             </div>
             <div className="relative">
@@ -59,7 +59,7 @@ export default function Contact() {
               value={formData.message}
               onChange={(e) => setFormData({...formData, message: e.target.value})}
               rows={5}
-              className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+              className="w-full bg-slate-200 dark:bg-white/5 border border-white/10 rounded px-4 py-3 text-gray-900 dark:text-gray-300 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 dark:focus:border-blue-300 dark:focus:bg-blue-300/10"
               placeholder="Your message..." />
             </div>
             <button 
