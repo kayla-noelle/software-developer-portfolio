@@ -26,7 +26,7 @@ export default function Contact() {
     return (
       <section id="contact" className="min-h-screen flex items-center justify-center relative bg-white dark:bg-gray-900 py-20">
       <RevealOnScroll>
-        <div className="px-4 w-150">
+        <div className="px-4 w-150 flex flex-col md:flex-row gap-6">
           <h2 className="text-gray-900 dark:text-white text-4xl font-bold mb-8">Get in Touch</h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
