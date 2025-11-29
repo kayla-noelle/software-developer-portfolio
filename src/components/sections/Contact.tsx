@@ -1,7 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from 'emailjs-com'
 import React from "react";
-
+import toast from "react-hot-toast";
 export default function Contact() {
   const [formData, setFormData] = React.useState({
     name:"",
@@ -9,19 +9,19 @@ export default function Contact() {
     message:"" ,
   });
 
+  React.useEffect(() => {
+  emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
+}, []);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-    const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY).then((result) => {
-      alert("Message sent successfully!");
+    emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.currentTarget, import.meta.env.VITE_PUBLIC_KEY).then(() => {
+      toast.success("Message sent successfully!");
       setFormData({name:"",
       email:"",
       message:"" ,
       });
-    }).catch(() => alert("Oops! Something went wrong, please try again."));
-
+    }).catch(() => toast.error("Oops! Something went wrong, please try again."));
   };
     return (
       <section id="contact" className="min-h-screen flex items-center justify-center relative bg-white dark:bg-gray-900 py-20">

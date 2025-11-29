@@ -8,6 +8,7 @@ import { useState } from "react";
 import About from "./components/sections/About.tsx";
 import Projects from "./components/sections/Projects.tsx";
 import Contact from "./components/sections/Contact.tsx";
+import { Toaster } from "react-hot-toast";
  function App() {
   const [isLoaded, setIsLoaded] =  useState (false);
   const [menuOpen, setMenuOpen] =  useState<boolean> (false);
@@ -21,6 +22,7 @@ import Contact from "./components/sections/Contact.tsx";
         <About />
         <Projects />
         <Contact />
+        <Toaster position="top-right" reverseOrder={false} />
       </div>
   
     </>
