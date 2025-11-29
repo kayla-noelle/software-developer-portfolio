@@ -18,6 +18,7 @@ html, body {
   }
 
 }
+
 @layer utilities {
    @keyframes blink {
     0%, 100%{
