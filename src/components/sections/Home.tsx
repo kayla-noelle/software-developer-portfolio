@@ -2,7 +2,7 @@ import { RevealOnScroll } from "../RevealOnScroll";
 // Hero Section
 export default function Hero() {
   return (
-   <section id="home" className="py-16 flex items-center justify-center relative bg-white dark:bg-gray-900">
+   <section id="home" className="min-h-screen flex items-center justify-center relative bg-white dark:bg-gray-900">
     <RevealOnScroll>
    <div className="text-center z-10 px-4">
    <h1 className="font-sans text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-200 via-orange-400 to-pink-600 bg-clip-text text-transparent bg-[length:200%_200%] animate-gradientWave">Hi, I'm Kayla Chavez</h1>
