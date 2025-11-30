@@ -40,7 +40,7 @@ export const TerminalSkills = (): JSX.Element => {
         setTypingCommand(false);
       } else {
         setTimeout(() => {
-          setLines([...lines, ""]);
+          setLines([]); // Clear lines for next step
           setStepIndex((stepIndex + 1) % terminalSteps.length);
           setCharIndex(0);
           setTypingCommand(true);
