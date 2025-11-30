@@ -1,9 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-{/* import { TerminalSkills } from "../TerminalSkills"; */}
+import { TerminalSkills } from "../TerminalSkills";
 export default function About() {
-  const frontendSkills = ["React", "TypeScript", "Tailwindcss", "Shopify"];
-  const backendSkills = ["Node.js", "Express", "MongoDB", "SQL"];
-  const otherSkills = ["AdobeSuite", "Figma", "WCAG", "Accessibility"];
     return (
       <section id="about" className="py-16 bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center">
         <RevealOnScroll>
@@ -13,33 +10,10 @@ export default function About() {
             <p className=" text-left text-gray-900 dark:text-gray-300 mb-6">
               I am a detail-oriented Front End Developer with a background in graphic design. After earning a B.A. in Graphic Design from San Diego State University, I began my career collaborating with various teams across branding, publications, and digital content. In 2021, I expanded my skills by completing a Full Stack Engineering bootcamp with Thinkful, which solidified my focus on software engineering. Today, I bring both design and development expertise together, creating clean, intuitive interfaces and products that are both functional and user-friendly. In my spare time, I am usually feeding that same love of learning –– whether it’s solving Wordle, Sudoku, or crossword puzzles or diving into a good mystery novel. Of course, when I need a break from all the problem solving…I head to the gym 💪
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-gray-900 dark:text-gray-300 text-xl font-bold mb-4"> Frontend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((skill,key) => (
-                  <span key={key} className="bg-sky-500/10 text-sky-500 py-1 px-3 rounded-full text-sm
-             hover:bg-sky-500/20 hover:shadow-[0_2px_8px_rgba(56,189,248,0.2)]
-             transition">{skill}</span>))}
-                </div>
-                </div>
-                <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-gray-900 dark:text-gray-300 text-xl font-bold mb-4"> Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((skill,key) => (
-                  <span key={key} className="bg-sky-500/10 text-sky-500 py-1 px-3 rounded-full text-sm hover:bg-sky-500/20 hover:shadow-[0_2px_8px_rgba(56,189,248,0.2)] transition">{skill}</span>))}
-                </div>
-                </div>
-                <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-gray-900 dark:text-gray-300 text-xl font-bold mb-4"> Other</h3>
-                <div className="flex flex-wrap gap-2">
-                   {otherSkills.map((skill,key) => (
-                  <span key={key} className="bg-sky-500/10 text-sky-500 py-1 px-3 rounded-full text-sm hover:bg-sky-500/20 hover:shadow-[0_2px_8px_rgba(56,189,248,0.2)] transition">{skill}</span>))}
-                </div>
-                </div>
-              </div>
             </div>
-            {/* <div className ="mt-6"><TerminalSkills /></div>*/}
+            <div className ="mt-6">
+              <h3 className="text-gray-900 dark:text-white text-xl font-bold mb-4">Skills</h3>
+              <TerminalSkills /></div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div className="p-6 rounded-xl border-white/10 border hover hover:-translate-y-1 transition-all">
               <h3 className=" text-left text-gray-900 dark:text-gray-300 text-xl font-bold mb-4"> 🏫 Education </h3>

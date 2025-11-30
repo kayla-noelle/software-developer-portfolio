@@ -53,7 +53,7 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
-
+/* Terminal Box Styling */
 /* Command text (green) */
 .command-text {
   color: #00ff00; /* bright green for commands */
@@ -81,14 +81,44 @@ html, body {
 /* Terminal box styling */
 .terminal-box {
   background-color: #000; /* black background */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 20px rgba(195, 192, 192, 0.4);
+  border-top: 20px solid #cbcbcb; /* thick top border */
   font-family: monospace;
   min-height: 200px;
+  max-width: 300px;
   line-height: 1.5rem;
-  overflow: hidden;
-  padding: 1rem; /* adjust padding as needed */
+  padding: 1rem; /* content padding */
   border-radius: 0.5rem; /* rounded corners */
   width: 100%;
-  max-width: 600px; /* optional max width */
-  margin: 0 auto; /* center horizontally */
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible; /* allow buttons to sit above border */
+}
+
+/* Terminal window buttons */
+.terminal-box::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* move higher above the thick border */
+  left: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56; /* red button */
+  box-shadow:
+    20px 0 0 0 #ffbd2e,   /* yellow button */
+    40px 0 0 0 #27c93f;   /* green button */
+}
+.terminal-box::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1; /* behind the box */
+  border-radius: 0.5rem;
+  background: linear-gradient(45deg, rgba(236, 129, 7, 0.872), rgba(245, 3, 160, 0.854));
+  filter: blur(20px);
 }
