@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import { TerminalSkills } from "../TerminalSkills";
+{/* import { TerminalSkills } from "../TerminalSkills"; */}
 export default function About() {
   const frontendSkills = ["React", "TypeScript", "Tailwindcss", "Shopify"];
   const backendSkills = ["Node.js", "Express", "MongoDB", "SQL"];
