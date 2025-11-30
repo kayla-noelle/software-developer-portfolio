@@ -53,3 +53,42 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Command text (green) */
+.command-text {
+  color: #00ff00; /* bright green for commands */
+}
+
+/* Output text (white) */
+.output-text {
+  color: #ffffff;
+}
+
+/* Blinking cursor */
+.cursor {
+  display: inline-block;
+}
+
+.blink {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Terminal box styling */
+.terminal-box {
+  background-color: #000; /* black background */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  font-family: monospace;
+  min-height: 200px;
+  line-height: 1.5rem;
+  overflow: hidden;
+  padding: 1rem; /* adjust padding as needed */
+  border-radius: 0.5rem; /* rounded corners */
+  width: 100%;
+  max-width: 600px; /* optional max width */
+  margin: 0 auto; /* center horizontally */
+}
