@@ -24,7 +24,7 @@ export default function Contact() {
     }).catch(() => toast.error("Oops! Something went wrong, please try again."));
   };
     return (
-      <section id="contact" className="min-h-screen flex items-center justify-center relative bg-white dark:bg-gray-900 py-20">
+      <section id="contact" className="py-16 flex items-center justify-center relative bg-white dark:bg-gray-900">
       <RevealOnScroll>
         <div className="px-4 w-150 w-full max-w-xl xl:max-w-3xl mx-auto px-4">
           <h2 className="text-gray-900 dark:text-white text-4xl font-bold mb-8">Get in Touch</h2>

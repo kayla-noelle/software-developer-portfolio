@@ -4,7 +4,7 @@ export default function About() {
   const backendSkills = ["Node.js", "Express", "MongoDB", "SQL"];
   const otherSkills = ["AdobeSuite", "Figma", "WCAG", "Accessibility"];
     return (
-      <section id="about" className="bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center py-20">
+      <section id="about" className="py-16 bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center">
         <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center">About Me</h2>
