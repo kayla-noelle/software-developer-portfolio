@@ -39,7 +39,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className ="mt-6"><TerminalSkills /></div>
+            {/* <div className ="mt-6"><TerminalSkills /></div>*/}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div className="p-6 rounded-xl border-white/10 border hover hover:-translate-y-1 transition-all">
               <h3 className=" text-left text-gray-900 dark:text-gray-300 text-xl font-bold mb-4"> 🏫 Education </h3>
