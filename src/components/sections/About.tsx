@@ -2,13 +2,13 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import { TerminalSkills } from "../TerminalSkills";
 export default function About() {
     return (
-      <section id="about" className="py-16 bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center">
+      <section id="about" className="py-16 bg-stone-50 dark:bg-stone-900 min-h-screen flex items-center justify-center">
         <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center">About Me</h2>
           <div className="glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
             <p className=" text-left text-gray-900 dark:text-gray-300 mb-6">
-              I am a detail-oriented Front End Developer with a background in graphic design. After earning a B.A. in Graphic Design from San Diego State University, I began my career collaborating with various teams across branding, publications, and digital content. In 2021, I expanded my skills by completing a Full Stack Engineering bootcamp with Thinkful, which solidified my focus on software engineering. Today, I bring both design and development expertise together, creating clean, intuitive interfaces and products that are both functional and user-friendly. In my spare time, I am usually feeding that same love of learning –– whether it’s solving Wordle, Sudoku, or crossword puzzles or diving into a good mystery novel. Of course, when I need a break from all the problem solving…I head to the gym 💪
+              I am a meticulous, precise Front End Developer with a strong background in graphic design. After earning my B.A. in Graphic Design from San Diego State University, I kicked off my career working with cross-functional teams on branding, publications, and digital experiences. In 2021, I leveled up my technical skills by completing a Full Stack Engineering bootcamp with Thinkful, which cemented my passion for software development. Today, I combine design with my engineering discipline to build clean, intuitive interfaces and user-focused products that look great and work even better. When I'm off the clock, I'm still usually feeding that same love of problem-solving whether that’s solving Wordle, Sudoku, or crossword puzzles or getting lost into a good mystery novel. When I finally need a break from all the puzzles, you'll find me at the gym resetting my brain!💪
             </p>
             </div>
             <div className ="mt-6">

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+          oswald: ['Oswald', "sans-serif"],
       },
       colors: {
         darkBg: '#111827',       // dark background

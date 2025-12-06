@@ -1,23 +1,38 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html, body {
   margin:0;
+  font-family: 'Oswald', sans-serif;
   padding:0;
-  font-family: 'Roboto', sans-serif;
-  background: #FBFBFF; /*light mode background*/
+  background: #fafaf9; /*light mode background*/
   color: #121212; /*light mode text color*/
 }
 @media (prefers-color-scheme: dark) {
   html, body {
-    background: #111827; /*dark mode background*/
-    color: #FBFBFF; /*dark mode text color*/
+    background: #1C1917; /*dark mode background*/
+    color: #fafaf9; /*dark mode text color*/
   }
 
 }
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @layer utilities {
    @keyframes blink {
@@ -119,6 +134,6 @@ html, body {
   bottom: -5px;
   z-index: -1; /* behind the box */
   border-radius: 0.5rem;
-  background: linear-gradient(45deg, rgba(236, 129, 7, 0.872), rgba(245, 3, 160, 0.854));
-  filter: blur(20px);
+  background: white;
+  filter: blur(15px);
 }

@@ -24,7 +24,7 @@ export default function Contact() {
     }).catch(() => toast.error("Oops! Something went wrong, please try again."));
   };
     return (
-      <section id="contact" className="py-16 flex items-center justify-center relative bg-white dark:bg-gray-900">
+      <section id="contact" className="py-16 flex items-center justify-center relative bg-stone-50 dark:bg-stone-900">
       <RevealOnScroll>
         <div className="w-full px-4 md:w-[600px] mx-auto glass rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all">
           <h2 className="text-gray-900 dark:text-white text-4xl font-bold mb-8">Get in Touch</h2>
@@ -64,7 +64,7 @@ export default function Contact() {
             </div>
             <button 
             type="submit" 
-            className="w-full bg-sky-400 text-white px-6 py-3 rounded text-lg font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(56,189,248,0.5)]">
+            className="w-full bg-stone-900 text-stone-50 dark:bg-stone-50 dark:text-stone-900 px-6 py-3 rounded text-lg font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(56,189,248,0.5)]">
               Send Message
             </button>
           </form>
